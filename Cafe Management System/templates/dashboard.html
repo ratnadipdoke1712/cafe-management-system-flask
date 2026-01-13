@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cabin Dashboard | Spot Of Love Birds</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="dashboard-body">
+
+<h2 class="dashboard-title">Cabin Dashboard</h2>
+
+<div class="cabins">
+{% for cabin in cabins %}
+    <div class="cabin-card {% if cabin[1]=='Reserved' %}reserved{% else %}free{% endif %}">
+        <h3>Cabin {{ cabin[0] }}</h3>
+        <p>Status: <strong>{{ cabin[1] }}</strong></p>
+
+        {% if cabin[1] == 'Free' %}
+            <a href="/reserve/{{ cabin[0] }}" class="btn">Reserve</a>
+        {% else %}
+            <div class="btn-group">
+                <a href="/order/{{ cabin[0] }}" class="btn">Take Order</a>
+                <a href="/checkout/{{ cabin[0] }}" class="btn red">Checkout</a>
+            </div>
+        {% endif %}
+    </div>
+{% endfor %}
+</div>
+
+<div class="home-btn-wrapper">
+    <a href="/" class="btn back-btn">⬅ Back to Home</a>
+</div>
+
+<a href="/daily-report" class="btn report-btn">
+    📊 Daily Report
+</a>
+<a href="/monthly-report" class="btn">📅 Monthly Report</a>
+
+
+</body>
+</html>

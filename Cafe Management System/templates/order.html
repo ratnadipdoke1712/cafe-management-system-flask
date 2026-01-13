@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Take Order | Spot Of Love Birds</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="order-body">
+
+    <h2 class="order-title">Order – Cabin {{ cabin_id }}</h2>
+
+    <!-- ADD ORDER FORM -->
+    <form method="POST" class="order-form">
+
+        <label for="item">Select Food Items</label>
+        <select name="items" id="item" multiple size="5">
+            <option value="Coffee" data-price="80">Coffee – ₹80</option>
+            <option value="Tea" data-price="50">Tea – ₹50</option>
+            <option value="Sandwich" data-price="120">Sandwich – ₹120</option>
+            <option value="Pizza" data-price="250">Pizza – ₹250</option>
+            <option value="Cake" data-price="150">Cake – ₹150</option>
+        </select>
+
+        <!-- Hidden prices -->
+        <input type="hidden" name="prices" id="prices">
+
+        <button type="submit" class="order-btn">
+            ➕ Add Order
+        </button>
+    </form>
+
+    <!-- CURRENT ORDERS -->
+    <div class="order-list">
+        <h3>Current Orders</h3>
+        <ul>
+            {% for order in orders %}
+                <li>
+                    {{ order[0] }}
+                    <span>₹{{ order[1] }}</span>
+                </li>
+            {% else %}
+                <li>
+                    <span>No orders yet</span>
+                    <span>₹0</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="back-area">
+        <a href="/dashboard" class="back-btn">
+            ⬅ Back to Dashboard
+        </a>
+    </div>
+
+    <!-- PRICE HANDLING SCRIPT -->
+    <script>
+        const select = document.getElementById("item");
+        const prices = document.getElementById("prices");
+
+        function updatePrices() {
+            let selected = [];
+            for (let option of select.options) {
+                if (option.selected) {
+                    selected.push(option.dataset.price);
+                }
+            }
+            prices.value = selected.join(",");
+        }
+
+        updatePrices();
+        select.addEventListener("change", updatePrices);
+    </script>
+
+</body>
+</html>

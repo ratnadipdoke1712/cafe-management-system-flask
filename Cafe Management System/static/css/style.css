@@ -1,0 +1,1204 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+
+body {
+    font-family: Georgia, serif;
+    background: #efe6ff;
+    text-align: center;
+}
+
+h2 {
+    color: #5a2d82;
+}
+
+.btn {
+    background: #9b6bcc;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.red {
+    background: #cc4b4b;
+}
+
+.cabins {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cabin-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 180px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.bill {
+    background: white;
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+}
+.cabin-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;   /* 👈 adds space between Take Order & Checkout */
+}
+
+
+.home-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.cabin-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ===== HOME PAGE ===== */
+
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(230,215,255,0.88), rgba(230,215,255,0.88)),
+        url("/static/images/cafe-bg.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 650px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(90, 45, 130, 0.35);
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    color: #5a2d82;
+    margin-bottom: 10px;
+}
+
+.hero-tagline {
+    font-size: 18px;
+    color: #7a5a9e;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.hero-desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.hero-btn {
+    margin-top: 30px;
+    padding: 14px 36px;
+    font-size: 17px;
+    border-radius: 30px;
+    background: #9b6bcc;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 60px 20px;
+    background: #efe6ff;
+}
+
+.feature-card {
+    background: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+    color: #5a2d82;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #5a2d82;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* ===== HOME PAGE BACKGROUND ===== */
+
+.hero {
+    height: 100vh;
+
+    /* 🌸 Background image with purple overlay */
+    background:
+        linear-gradient(
+            rgba(90, 45, 130, 0.75),
+            rgba(90, 45, 130, 0.75)
+        ),
+        url("/static/images/cafe-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Dashboard Layout */
+.dashboard-body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f3e8ff, #ede9fe);
+    color: #4b1c6f;
+}
+
+.dashboard-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 36px;
+}
+
+.dashboard-container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Cabins Grid */
+.cabins {
+    display: grid;
+    padding: 20px;
+    margin: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.cabin-card {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(120, 80, 160, 0.2);
+}
+
+.cabin-card h3 {
+    margin-bottom: 8px;
+}
+
+.status {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.free .status {
+    color: green;
+}
+
+.reserved .status {
+    color: crimson;
+}
+
+/* Buttons */
+.cabin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: #b58cff;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #9f67ff;
+}
+
+.btn.red {
+    background: #e11d48;
+}
+
+.btn.red:hover {
+    background: #be123c;
+}
+
+/* Back Button */
+.home-btn-wrapper {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.back-btn {
+    background: #7c3aed;
+}
+
+/* ===============================
+   GLOBAL STYLES
+================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #4b1c6f;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Common Button */
+.btn,
+.order-btn,
+.back-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #a78bfa, #d8b4fe);
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover,
+.order-btn:hover,
+.back-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #8b5cf6, #c084fc);
+}
+
+/* ===============================
+   DASHBOARD PAGE
+================================ */
+.dashboard-body {
+    background: linear-gradient(to right, #f3e8ff, #ede9fe);
+}
+
+.dashboard-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+}
+
+.dashboard-container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Cabin Grid */
+.cabins {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.cabin-card {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(120, 80, 160, 0.25);
+    transition: transform 0.3s;
+}
+
+.cabin-card:hover {
+    transform: translateY(-6px);
+}
+
+.cabin-card h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.status {
+    font-weight: bold;
+    margin: 10px 0 15px;
+}
+
+.free .status {
+    color: green;
+}
+
+.reserved .status {
+    color: crimson;
+}
+
+/* Cabin Buttons */
+.cabin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Back to Home */
+.home-btn-wrapper {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===============================
+   ORDER PAGE (PREMIUM LOOK)
+================================ */
+.order-body {
+    min-height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(243,232,255,0.95), rgba(224,204,255,0.9)),
+        url("/static/images/cafe-bg.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.order-title {
+    margin-top: 40px;
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    color: #4c1d95;
+    letter-spacing: 1px;
+}
+
+/* Glass Card */
+.order-form,
+.order-list {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+}
+
+/* Order Form */
+.order-form {
+    margin-top: 25px;
+    padding: 35px 45px;
+    width: 380px;
+    box-shadow: 0 18px 40px rgba(90, 45, 130, 0.35);
+}
+
+.order-form label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.order-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #c4b5fd;
+    margin-bottom: 22px;
+    font-size: 15px;
+    background: #faf5ff;
+    transition: all 0.3s;
+}
+
+.order-form select:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+/* Order List */
+.order-list {
+    margin-top: 30px;
+    width: 380px;
+    padding: 28px;
+    box-shadow: 0 14px 32px rgba(120, 80, 160, 0.3);
+}
+
+.order-list h3 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+.order-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.order-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #c4b5fd;
+}
+
+.order-list li span {
+    font-weight: bold;
+    color: #6d28d9;
+}
+
+/* Back Button Area */
+.back-area {
+    width: 380px;
+    margin: 35px 0;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 420px) {
+    .order-form,
+    .order-list,
+    .back-area {
+        width: 90%;
+    }
+}
+
+/* ===== MULTI-SELECT STYLING ===== */
+
+/* Make select look like a premium card */
+.order-form select[multiple] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #c4b5fd;
+    background: rgba(250, 245, 255, 0.95);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    height: 150px; /* Show multiple items */
+    overflow-y: auto;
+}
+
+/* Hover effect */
+.order-form select[multiple]:hover {
+    background: rgba(243, 232, 255, 1);
+}
+
+/* Highlight selected options */
+.order-form select[multiple] option:checked {
+    background-color: #a78bfa;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Scrollbar styling for select */
+.order-form select[multiple]::-webkit-scrollbar {
+    width: 8px;
+}
+
+.order-form select[multiple]::-webkit-scrollbar-track {
+    background: #f3e8ff;
+    border-radius: 10px;
+}
+
+.order-form select[multiple]::-webkit-scrollbar-thumb {
+    background: #b58cff;
+    border-radius: 10px;
+}
+
+.order-form select[multiple]::-webkit-scrollbar-thumb:hover {
+    background: #9f67ff;
+}
+
+/* Dashboard styling */
+.dashboard-body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f4fc;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard-title {
+    color: #7c3aed;
+    margin-bottom: 25px;
+}
+
+.cabins {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cabin-card {
+    background: #f3e8ff;
+    border: 2px solid #c4b5fd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 180px;
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2);
+}
+
+.cabin-card.reserved {
+    background: #ede9fe;
+    border-color: #7c3aed;
+}
+
+.cabin-card .btn {
+    margin-top: 10px;
+}
+
+.cabin-card .btn.red {
+    background-color: #a855f7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cabin-card .btn.red:hover {
+    background-color: #7c3aed;
+}
+
+.home-btn-wrapper {
+    margin-top: 30px;
+}
+
+/* ===== BILL PAGE STYLISH CSS ===== */
+
+.bill-body {
+    background: linear-gradient(135deg, #f9f5ff, #e9d9ff);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bill-container {
+    width: 100%;
+    max-width: 750px;
+    padding: 30px;
+    text-align: center;
+}
+
+.bill-heading {
+    font-size: 36px;
+    color: #6a1b9a;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.bill-subtitle {
+    font-size: 16px;
+    color: #7b5ca7;
+    margin-bottom: 25px;
+}
+
+.bill-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(106, 27, 154, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.bill-card:hover {
+    box-shadow: 0 20px 50px rgba(106, 27, 154, 0.25);
+}
+
+.bill-title {
+    font-size: 26px;
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+.cabin-info {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.bill-table th,
+.bill-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.bill-table th {
+    background: #f3e8ff;
+    color: #6a1b9a;
+    font-weight: 600;
+}
+
+.bill-table tr:hover {
+    background: #fdf0ff;
+}
+
+.cabin-charge td {
+    font-weight: 600;
+    color: #333;
+}
+
+.total-row td {
+    background: #6a1b9a;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bill-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn {
+    background: #d1c4e9;
+    color: #6a1b9a;
+}
+
+.back-btn:hover {
+    background: #b39ddb;
+    color: #fff;
+}
+
+.print-btn {
+    background: #8e24aa;
+    color: #fff;
+}
+
+.print-btn:hover {
+    background: #6a1b9a;
+}
+
+.footer-text {
+    margin-top: 25px;
+    font-style: italic;
+    color: #7b5ca7;
+}
+
+/* ===== BILL PAGE STYLISH CSS ===== */
+
+.bill-body {
+    background: linear-gradient(135deg, #f9f5ff, #e9d9ff);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.bill-title {
+    font-size: 28px;
+    color: #6a1b9a;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.bill-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 15px 40px rgba(106, 27, 154, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.bill-box:hover {
+    box-shadow: 0 20px 50px rgba(106, 27, 154, 0.25);
+}
+
+.bill-box h3 {
+    font-size: 20px;
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+.bill-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.bill-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #555;
+}
+
+.bill-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 10px 0;
+    color: #333;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #ccc;
+    margin: 15px 0;
+}
+
+.bill-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a1b9a;
+    padding: 10px 0;
+}
+
+.bill-actions {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.bill-actions .btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: #8e24aa;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bill-actions .btn:hover {
+    background: #6a1b9a;
+}
+
+/* ===== BILL PAGE STYLISH CSS ===== */
+.bill-body {
+    background: linear-gradient(135deg, #f9f5ff, #e9d9ff);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.bill-container {
+    width: 100%;
+    max-width: 750px;
+    padding: 30px;
+    text-align: center;
+}
+
+.bill-heading {
+    font-size: 36px;
+    color: #6a1b9a;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.bill-subtitle {
+    font-size: 16px;
+    color: #7b5ca7;
+    margin-bottom: 25px;
+}
+
+.bill-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(106, 27, 154, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.bill-card:hover {
+    box-shadow: 0 20px 50px rgba(106, 27, 154, 0.25);
+}
+
+.bill-title {
+    font-size: 26px;
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+.cabin-info, .cabin-time {
+    font-size: 16px;
+    color: #6a1b9a;
+    margin-bottom: 10px;
+}
+
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.bill-table th,
+.bill-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.bill-table th {
+    background: #f3e8ff;
+    color: #6a1b9a;
+    font-weight: 600;
+}
+
+.bill-table tr:hover {
+    background: #fdf0ff;
+}
+
+.cabin-charge td {
+    font-weight: 600;
+    color: #333;
+}
+
+.total-row td {
+    background: #6a1b9a;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bill-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.back-btn {
+    background: #d1c4e9;
+    color: #6a1b9a;
+}
+
+.back-btn:hover {
+    background: #b39ddb;
+    color: #fff;
+}
+
+.print-btn {
+    background: #8e24aa;
+    color: #fff;
+}
+
+.print-btn:hover {
+    background: #6a1b9a;
+}
+
+.footer-text {
+    margin-top: 25px;
+    font-style: italic;
+    color: #7b5ca7;
+}
+
+.report-body {
+    background: linear-gradient(135deg, #f9f5ff, #e9d9ff);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.report-container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(106, 27, 154, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.report-container h1 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.grand-total td {
+    font-weight: bold;
+    background: #6a1b9a;
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    background: #8e24aa;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #6a1b9a;
+}
+
+/* ===== DAILY REPORT ===== */
+.report-body {
+    background: linear-gradient(135deg, #f9f5ff, #eadcff);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report-container {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.2);
+    text-align: center;
+}
+
+.report-title {
+    color: #6a1b9a;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.report-date {
+    color: #7b5ca7;
+    margin-bottom: 25px;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.report-table th {
+    background: #f3e8ff;
+    color: #6a1b9a;
+}
+
+.report-table tr:hover {
+    background: #faf0ff;
+}
+
+.grand-total-box {
+    background: #6a1b9a;
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background: #b39ddb;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: #6a1b9a;
+}
+
+/* ===== DAILY SUMMARY ===== */
+.summary-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 25px 0 35px;
+}
+
+.summary-card {
+    background: #f3e8ff;
+    padding: 25px 35px;
+    border-radius: 18px;
+    text-align: center;
+    min-width: 220px;
+    box-shadow: 0 10px 25px rgba(106, 27, 154, 0.2);
+}
+
+.summary-card h3 {
+    color: #6a1b9a;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-title {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+.cabins {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.btn, button {
+    padding: 10px 18px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.order-form {
+    max-width: 420px;
+    width: 90%;
+    margin: auto;
+}
+
+.order-form select,
+.order-form button {
+    width: 100%;
+}
+
+.bill-container,
+.bill-box {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.bill-list li,
+.bill-row,
+.bill-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    .dashboard-title {
+        font-size: 22px;
+    }
+
+    .cabin-card {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-btn-wrapper {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .report-summary {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .report-table {
+        font-size: 14px;
+    }
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+}

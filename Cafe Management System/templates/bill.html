@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Bill | Spot Of Love Birds</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="bill-body">
+
+    <div class="bill-container">
+
+        <!-- Header -->
+        <h1 class="bill-heading">Spot Of Love Birds 💜</h1>
+        <p class="bill-subtitle">Thank you for visiting our café</p>
+
+        <!-- Bill Card -->
+        <div class="bill-card">
+
+            <h2 class="bill-title">Final Bill</h2>
+
+            <!-- Cabin Info & Duration -->
+            <p class="cabin-info">Cabin No: <strong>{{ cabin_id }}</strong></p>
+            <p class="cabin-time">Total Time: <strong>{{ duration }}</strong></p>
+
+            <!-- Food Orders Table -->
+            <table class="bill-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td>{{ order[0] }}</td>
+                        <td>{{ order[1] }}</td>
+                    </tr>
+                    {% endfor %}
+
+                    <tr class="cabin-charge">
+                        <td>Cabin Charges</td>
+                        <td>{{ cabin_bill }}</td>
+                    </tr>
+
+                    <tr class="total-row">
+                        <td>Total Amount</td>
+                        <td>₹ {{ total_bill }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Action Buttons -->
+            <div class="bill-actions">
+                <a href="/dashboard" class="btn back-btn">⬅ Back to Dashboard</a>
+                <button onclick="window.print()" class="btn print-btn">🖨 Print Bill</button>
+            </div>
+
+        </div>
+
+        <p class="footer-text">
+            A perfect place for love, privacy & memories 💕
+        </p>
+
+    </div>
+
+</body>
+</html>

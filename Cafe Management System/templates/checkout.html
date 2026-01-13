@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill | Spot Of Love Birds</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="bill-body">
+
+<h2 class="bill-title">Final Bill – Cabin {{ cabin_id }}</h2>
+
+<div class="bill-box">
+
+    <h3>Food Orders</h3>
+
+    <ul class="bill-list">
+        {% for order in orders %}
+            <li>
+                {{ order[0] }}
+                <span>₹{{ order[1] }}</span>
+            </li>
+        {% else %}
+            <li>No orders</li>
+        {% endfor %}
+    </ul>
+
+    <div class="bill-row">
+        <span>Cabin Charges</span>
+        <span>₹{{ cabin_bill }}</span>
+    </div>
+
+    <div class="bill-row">
+        <span>Food Total</span>
+        <span>₹{{ total_order }}</span>
+    </div>
+
+    <hr>
+
+    <div class="bill-total">
+        <span>Total Bill</span>
+        <span>₹{{ total_bill }}</span>
+    </div>
+
+</div>
+
+<div class="bill-actions">
+    <a href="/dashboard" class="btn">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Report | Spot Of Love Birds</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="report-body">
+
+<div class="report-container">
+
+    <h1 class="report-title">Daily Business Report 💜</h1>
+    <p class="report-date">Date: {{ date }}</p>
+
+    <!-- SUMMARY BOX -->
+    <div class="summary-box">
+        <div class="summary-card">
+            <h3>Total Couples</h3>
+            <p>{{ total_couples }}</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Total Collection</h3>
+            <p>₹ {{ total_money }}</p>
+        </div>
+    </div>
+
+    <!-- CABIN WISE REPORT -->
+    <h3 class="section-title">Cabin-wise Revenue</h3>
+
+    <table class="report-table">
+        <thead>
+            <tr>
+                <th>Cabin No</th>
+                <th>Cabin Charges (₹)</th>
+                <th>Food Total (₹)</th>
+                <th>Total (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in cabin_reports %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4">No data available</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/dashboard" class="btn back-btn">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
